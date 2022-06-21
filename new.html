@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" href="w3.css">
+<style>
+.mySlides {display: none;}
+</style>
+
+<body>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="w3-content w3-display-content">
+    <img class="mySlides" src="upload/add-user.png" style="width:100%">
+	<img class="mySlides" src="upload/static.jpg" style="width:100%">
+	<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+
+
+<!-- The dots/circles 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>-->
+</body>
